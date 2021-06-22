@@ -27,7 +27,7 @@ do
     ECHOUE=true
   fi
 
-   echo "$(cat log.txt)"
+   cat log.txt
    echo "Fin compilation de $line"
    echo ""
 done < "$entreefich"
