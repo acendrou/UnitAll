@@ -4,10 +4,7 @@ g++ --version
 
 ECHOUE=false
 
-cd ..
-ls
-cd src
-cd cpp
+cd src/cpp
 
 echo "Nous sommes ici : $(pwd)"
 
