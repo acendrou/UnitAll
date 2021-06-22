@@ -5,6 +5,7 @@ g++ --version
 ECHOUE=false
 
 cd ..
+ls
 cd src
 cd cpp
 
