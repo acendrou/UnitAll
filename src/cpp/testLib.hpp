@@ -18,7 +18,7 @@ public:
     virtual void afficheResultats() = 0;
 };
 
-class TestSimple : public Test //classe fille
+class TestSimple : public Test
 {
 private:
     std::vector<bool> m_reussites;
