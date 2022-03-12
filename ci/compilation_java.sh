@@ -24,7 +24,7 @@ function compile () {
   
 
   # create jar file
-  jar cmvf ./META-INF/MANIFEST.MF "$name.jar" *.class ./*/*.class
+  jar cvmf ./META-INF/MANIFEST.MF "$name.jar" *.class ./*/*.class -e Main
 
   if [ $? -ne 0 ]
   then
