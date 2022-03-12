@@ -23,7 +23,7 @@ jobs:
       - name: test
         run: |
           pwd
-          # java -jar ./build/test.jar
+          java -jar ./build/test.jar
           
       - name: 'Upload Artifact jar'
         uses: actions/upload-artifact@v2
