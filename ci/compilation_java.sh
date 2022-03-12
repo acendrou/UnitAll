@@ -9,7 +9,7 @@ function compile () {
   echo -n "working directory:"; pwd
 
   # compile from source file
-  javac -Xlint:unchecked  -d ./temp *.java */*.java
+  javac -Xlint:unchecked  -d ./temp *.java ./*/*.java
   
   if [ $? -ne 0 ]
   then
