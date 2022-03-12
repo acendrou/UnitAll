@@ -18,14 +18,14 @@ jobs:
       - name: compilation
         run: |
           chmod +x ci/compilation_java.sh
-          ./ci/compilation_java.sh -s ./src/java/ -d ./build -n test
+          ./ci/compilation_java.sh -s ./src/java/ -d ./build -n UnitAll
 
           
       - name: 'Upload Artifact jar'
         uses: actions/upload-artifact@v2
         with:
-          name: 'file jar'
-          path: ./build/test.jar
+          name: 'UnitAll jar'
+          path: ./build/UnitAll.jar
           retention-days: 1
     
   test:
@@ -37,10 +37,10 @@ jobs:
       - name: compilation
         run: |
           chmod +x ci/compilation_java.sh
-          ./ci/compilation_java.sh -s ./src/java/ -d ./build -n test
+          ./ci/compilation_java.sh -s ./src/java/ -d ./build -n UnitAll
 
       - name: test
         run: |
           pwd
-          java -jar ./build/test.jar
+          java -jar ./build/UnitAll.jar
            
