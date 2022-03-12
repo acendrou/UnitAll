@@ -1,0 +1,33 @@
+name: java
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: compilation
+        run: |
+          chmod +x ci/compilation_java.sh
+          ./ci/compilation_java.sh -s ./src/java/ -d ./build -n test
+
+      - name: test
+        run: |
+          pwd
+          # java -jar ./build/test.jar
+          
+      - name: 'Upload Artifact jar'
+        uses: actions/upload-artifact@v2
+        with:
+          name: 'file jar'
+          path: ./build/test.jar
+          retention-days: 1
