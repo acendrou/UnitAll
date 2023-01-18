@@ -6,3 +6,6 @@ In the folder src/cpp
 
 ## Java ![java](https://github.com/acendrou/UnitAll/actions/workflows/java.yml/badge.svg)
 In the folder src/java
+
+## Rust ![rust](https://github.com/acendrou/UnitAll/actions/workflows/rust.yml/badge.svg)
+In the folder src/rust
